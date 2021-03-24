@@ -1,2 +1,8 @@
+import re
+
+
 def abbreviate(words):
-    pass
+    pattern = re.compile(r"\b\w")
+    cleaned = re.sub("[_|']", "", words).upper()
+
+    return "".join(pattern.findall(cleaned))
