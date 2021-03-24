@@ -1,2 +1,6 @@
+import re
+from collections import Counter
+
+
 def count_words(sentence):
-    pass
+    return Counter(re.findall(r"[\w]+(?:'\w)*", sentence.lower().replace("_", " ")))
